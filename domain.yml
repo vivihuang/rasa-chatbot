@@ -1,122 +1,63 @@
 intents:
-- confirm
-- deny
-- goodbye
-- greet
-- inform
-- inform_current_phone
-- inform_item
-- inform_other_phone
-- inform_package
-- inform_time
-- request_management
-- request_search
-- thanks
-- unknown_intent
-- RateBook
-- PlayMusic
-- AddToPlaylist
-- GetWeather
-- BookRestaurant
-- SearchCreativeWork
-- SearchScreeningEvent
+  - AddToPlaylist
+  - BookRestaurant
+  - GetWeather
+  - PlayMusic
+  - RateBook
+  - SearchCreativeWork
+  - SearchScreeningEvent
 entities:
-- data_plan
-- item
-- package
-- phone_number
-- price
-- time
-- state
-- rating_unit
-- object_part_of_series_type
-- facility
-- best_rating
-- playlist_owner
-- track
-- served_dish
-- spatial_relation
-- city
-- sort
-- movie_name
-- party_size_number
-- service
-- rating_value
-- cuisine
-- current_location
-- movie_type
-- geographic_poi
-- object_name
-- music_item
-- playlist
-- entity_name
-- party_size_description
-- year
-- object_type
-- genre
-- object_select
-- album
-- restaurant_name
-- timeRange
-- condition_temperature
-- location_name
-- poi
-- country
-- condition_description
-- object_location_type
-- restaurant_type
-- artist
-slots:
-  item:
-    type: text
-  package:
-    type: text
-  phone_number:
-    type: text
-  price:
-    type: text
-  time:
-    type: text
+  - album
+  - artist
+  - best_rating
+  - city
+  - condition_description
+  - condition_temperature
+  - country
+  - cuisine
+  - current_location
+  - entity_name
+  - facility
+  - genre
+  - geographic_poi
+  - location_name
+  - movie_name
+  - movie_type
+  - music_item
+  - object_location_type
+  - object_name
+  - object_part_of_series_type
+  - object_select
+  - object_type
+  - party_size_description
+  - party_size_number
+  - playlist
+  - playlist_owner
+  - poi
+  - rating_unit
+  - rating_value
+  - restaurant_name
+  - restaurant_type
+  - served_dish
+  - service
+  - sort
+  - party_size_number
+  - spatial_relation
+  - state
+  - timeRange
+  - track
+  - year
 templates:
   utter_greet:
-  - text: 您好! 我是机器人小贝，很高兴为您服务。
-  - text: 你好! 我是小贝，可以帮您办理流量套餐，话费查询等业务。
-  - text: hi! 我是小贝，有什么可以帮您吗。
+    - text: Hi!
   utter_goodbye:
-  - text: 再见，为您服务很开心
-  - text: Bye， 下次再见
+    - text: Bye.
   utter_default:
-  - text: 您说什么，小贝听不懂。
-  - text: 你说的小贝不懂呀！
-  - text: 不好意思，您能换个说法吗？
+    - text: Yeah.
   utter_thanks:
-  - text: 不用谢
-  - text: 我应该做的
-  - text: 您开心我就开心
-  utter_ask_morehelp:
-  - text: 还有什么能帮您吗？
-  - text: 您还需要什么服务？
-  utter_ask_time:
-  - text: 你想查哪个时间段的？
-  - text: 你想查几月份的？
-  utter_ask_phonenum:
-  - text: 你想查的手机号码是？
-  utter_confirm:
-  - text: 你确认吗？
-  utter_ask_package:
-  - text: 我们现在支持办理流量套餐：套餐一：二十元包月三十兆；套餐二：四十元包月八十兆，请问您需要哪个？
-  - text: 我们有如下套餐供您选择：套餐一：二十元包月三十兆；套餐二：四十元包月八十兆，请问您需要哪个？
-  utter_ack_management:
-  - text: 已经为您办理好了{package}
+    - text: You are welcome.
 actions:
-- action_search_consume
-- utter_ack_management
-- utter_ask_morehelp
-- utter_ask_package
-- utter_ask_phonenum
-- utter_ask_time
-- utter_confirm
-- utter_default
-- utter_goodbye
-- utter_greet
-- utter_thanks
+  - utter_default
+  - utter_goodbye
+  - utter_greet
+  - utter_thanks
