@@ -3,3 +3,9 @@ __pycache__
 failed_stories.md
 story_confmat.md
 test_env
+venv
+
+*.db
+*.db-journal
+
+.idea
