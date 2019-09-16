@@ -1,208 +1,219 @@
-entities:
-  - album
-  - artist
-  - best_rating
-  - city
-  - condition_description
-  - condition_temperature
-  - country
-  - cuisine
-  - current_location
-  - entity_name
-  - facility
-  - genre
-  - geographic_poi
-  - location_name
-  - movie_name
-  - movie_type
-  - music_item
-  - object_location_type
-  - object_name
-  - object_part_of_series_type
-  - object_select
-  - object_type
-  - party_size_description
-  - party_size_number
-  - playlist
-  - playlist_owner
-  - poi
-  - rating_unit
-  - rating_value
-  - restaurant_name
-  - restaurant_type
-  - served_dish
-  - service
-  - sort
-  - party_size_number
-  - spatial_relation
-  - state
-  - timeRange
-  - track
-  - year
-
 intents:
-  - enter_data: {use_entities: false}
-  - AddToPlaylist
-  - BookRestaurant
-  - GetWeather
-  - PlayMusic
-  - RateBook
-  - SearchCreativeWork
-  - SearchScreeningEvent
-  - canthelp
-  - greet
-  - thank
-  - bye
-  - deny
-  - affirm
-  - react_positive
-  - react_negative
-  - ask_howold
-  - ask_isbot
-  - ask_whoisit
-  - ask_whatspossible
-  - ask_howdoing
-  - ask_weather
-  - ask_languagesbot
-  - ask_time
-  - ask_wherefrom
-  - ask_whatismyname
-  - out_of_scope
-  - feedback
-  - handleinsult
-  - nicetomeeyou
-  - telljoke
-
+- AddToPlaylist
+- BookRestaurant
+- GetWeather
+- PlayMusic
+- RateBook
+- SearchCreativeWork
+- SearchScreeningEvent
+- affirm
+- ask_howdoing
+- ask_howold
+- ask_isbot
+- ask_languagesbot
+- ask_time
+- ask_weather
+- ask_whatismyname
+- ask_whatspossible
+- ask_wherefrom
+- ask_whoami
+- ask_whoisit
+- bye
+- canthelp
+- deny
+- enter_data:
+    use_entities: []
+- explain
+- feedback
+- greet
+- handleinsult
+- human_handoff
+- nicetomeeyou
+- out_of_scope
+- react_negative
+- react_positive
+- telljoke
+- thank
+entities:
+- album
+- artist
+- best_rating
+- city
+- condition_description
+- condition_temperature
+- country
+- cuisine
+- current_location
+- entity_name
+- facility
+- feedback_value
+- genre
+- geographic_poi
+- location_name
+- movie_name
+- movie_type
+- music_item
+- name
+- number
+- object_location_type
+- object_name
+- object_part_of_series_type
+- object_select
+- object_type
+- party_size_description
+- party_size_number
+- playlist
+- playlist_owner
+- poi
+- rating_unit
+- rating_value
+- restaurant_name
+- restaurant_type
+- served_dish
+- service
+- sort
+- spatial_relation
+- state
+- timeRange
+- track
+- year
 slots:
-  shown_privacy:
+  feedback_value:
     type: unfeaturized
   name:
     type: text
-
+  shown_privacy:
+    type: unfeaturized
 templates:
   utter_greet:
-    - text: "Hey there, welcome!"
+  - text: Hey there, welcome!
   utter_greet_name:
-    - text: "Hi, {name}!"
-    - text: "Hello, {name}!"
-    - text: "Hey, {name}!"
+  - text: Hi, {name}!
+  - text: Hello, {name}!
+  - text: Hey, {name}!
   utter_greet_noname:
-    - text: "Hey!"
-    - text: "Hi!"
-    - text: "Hey there!"
+  - text: Hey!
+  - text: Hi!
+  - text: Hey there!
   utter_inform_privacypolicy:
-    - text: "By chatting to me you agree to our privacy policy."
+  - text: By chatting to me you agree to our privacy policy.
   utter_ask_name:
-    - text: "What's your name?"
+  - text: What's your name?
   utter_no_speak:
-    - text: "I'm afraid we can't chat then 😢"
+  - text: I'm afraid we can't chat then 😢
   utter_ask_weather:
-    - text: "I don't know about where you live, but in my world it's always sunny ☀️"
-    - text: "Honestly it's a bit too hot these days 😅"
-    - text: "Blue skies and sunshine!"
-    - text: "Let's just say it hasn't rained in weeks ☀️"
+  - text: I don't know about where you live, but in my world it's always sunny ☀️
+  - text: Honestly it's a bit too hot these days 😅
+  - text: Blue skies and sunshine!
+  - text: Let's just say it hasn't rained in weeks ☀️
   utter_ask_howdoing:
-    - text: "I'm great! Thanks for asking."
-    - text: "I'm good, thanks!"
-    - text: "A little bit too warm, otherwise fine."
+  - text: I'm great! Thanks for asking.
+  - text: I'm good, thanks!
+  - text: A little bit too warm, otherwise fine.
   utter_ask_whoisit:
-    - text: "I'm the most beautiful bot! 🤖"
+  - text: I'm the most beautiful bot! 🤖
   utter_out_of_scope:
-    - text: "Sorry, I can’t deal with that request."
-    - text: "I'm sorry, I can't handle that request."
-    - text: "I can't help you with that, I'm sorry."
-    - text: "Even a bot is not completely perfect - it seems like I can't handle that request."
+  - text: Sorry, I can’t deal with that request.
+  - text: I'm sorry, I can't handle that request.
+  - text: I can't help you with that, I'm sorry.
+  - text: Even a bot is not completely perfect - it seems like I can't handle that
+      request.
   utter_noworries:
-    - text: "No worries!"
-    - text: "You're welcome!"
-    - text: "I'm happy to help."
+  - text: No worries!
+  - text: You're welcome!
+  - text: I'm happy to help.
   utter_great:
-    - text: "Great! 👍"
-    - text: "That's great! 🙌"
-    - text: "Awesome! 🎉"
-    - text: "Cool, let's do it 🚀"
+  - text: Great! 👍
+  - text: That's great! 🙌
+  - text: Awesome! 🎉
+  - text: Cool, let's do it 🚀
   utter_awesome:
-    - text: "Awesome, thanks! 👍"
-    - text: "Sweet, thank you! 😄"
-    - text: "Thanks! 👌"
-    - text: "Cool, thank you!"
+  - text: Awesome, thanks! 👍
+  - text: Sweet, thank you! 😄
+  - text: Thanks! 👌
+  - text: Cool, thank you!
   utter_bye:
-    - text: "Goodbye!"
-    - text: "Bye!"
-    - text: "Ciao!"
-    - text: "Bye, was nice talking to you!"
+  - text: Goodbye!
+  - text: Bye!
+  - text: Ciao!
+  - text: Bye, was nice talking to you!
   utter_default:
-    - text: "Sorry, I didn't get that 🤷🏻‍. Could you please rephrase?"
-    - text: "I didn't understand, could you rephrase that?"
-    - text: "I'm sorry, but I didn't understand you. Could you please rephrase what you just said?"
-    - text: "I'm afraid I didn't get what you just said. Could you rephrase that?"
-    - text: "I didn't quite get that, could you rephrase your message?"
-    - text: "Could you rephrase your message? I didn't get it, I'm sorry."
+  - text: Sorry, I didn't get that 🤷🏻‍. Could you please rephrase?
+  - text: I didn't understand, could you rephrase that?
+  - text: I'm sorry, but I didn't understand you. Could you please rephrase what you
+      just said?
+  - text: I'm afraid I didn't get what you just said. Could you rephrase that?
+  - text: I didn't quite get that, could you rephrase your message?
+  - text: Could you rephrase your message? I didn't get it, I'm sorry.
   utter_ask_feedback:
-    - text: "How is this conversation going?"
-      buttons:
-        - title: "👍"
-          payload: "/feedback{\"feedback_value\":\"positive\"}"
-        - title: "👎"
-          payload: "/feedback{\"feedback_value\":\"negative\"}"
+  - text: How is this conversation going?
+    buttons:
+    - title: 👍
+      payload: /feedback{"feedback_value":"positive"}
+    - title: 👎
+      payload: /feedback{"feedback_value":"negative"}
   utter_canthelp:
-    - text: "I'm sorry I couldn't help you."
+  - text: I'm sorry I couldn't help you.
   utter_nohelp:
-    - text: "For now that's all I can do, so feel free to try it out. If you have any suggestions for what I should learn, let me know!"
+  - text: For now that's all I can do, so feel free to try it out. If you have any
+      suggestions for what I should learn, let me know!
   utter_thumbsup:
-    - text: "👍"
-    - text: "Okay."
-    - text: "Got it."
+  - text: 👍
+  - text: Okay.
+  - text: Got it.
   utter_ask_isbot:
-    - text: "Yep, I'm a bot!"
+  - text: Yep, I'm a bot!
   utter_cant_answer_tech_question:
-    - text: "I can't answer that."
+  - text: I can't answer that.
   utter_anything_else:
-    - text: "Is there anything else I can help you with?"
+  - text: Is there anything else I can help you with?
   utter_ask_feedback_message:
-    - text: "I’m sorry I couldn't help you. Please let me know if you have any suggestions for how I can improve."
+  - text: I’m sorry I couldn't help you. Please let me know if you have any suggestions
+      for how I can improve.
   utter_thanks_for_feedback:
-    - text: "Thanks! Check out our [forum](https://forum.rasa.com), some of the smart people from our community can answer your questions there."
+  - text: Thanks! Check out our [forum](https://forum.rasa.com), some of the smart
+      people from our community can answer your questions there.
   utter_restart_with_button:
-    - text: "Click the button below if you want to start over."
-      buttons:
-        - title: "Restart"
-          payload: "/restart"
+  - text: Click the button below if you want to start over.
+    buttons:
+    - title: Restart
+      payload: /restart
   utter_not_sure:
-    - text: "Hmm, not sure what you mean..."
+  - text: Hmm, not sure what you mean...
   utter_react_negative:
-    - text: "😢"
+  - text: 😢
   utter_react_positive:
-    - text: "😍"
-
+  - text: 😍
 actions:
-  - utter_greet
-  - utter_greet_name
-  - utter_greet_noname
-  - utter_ask_name
-  - utter_no_speak
-  - utter_ask_weather
-  - utter_ask_howdoing
-  - utter_ask_whoisit
-  - utter_out_of_scope
-  - utter_noworries
-  - utter_great
-  - utter_awesome
-  - utter_bye
-  - utter_default
-  - utter_ask_feedback
-  - utter_canthelp
-  - utter_nohelp
-  - utter_thumbsup
-  - utter_ask_isbot
-  - utter_cant_answer_tech_question
-  - utter_anything_else
-  - utter_restart_with_button
-  - utter_not_sure
-  - utter_react_negative
-  - utter_react_positive
-  - action_chitchat
-  - action_greet_user
-  - action_default_fallback
-  - action_default_ask_affirmation
-  - action_next_step
+- action_chitchat
+- action_default_ask_affirmation
+- action_default_fallback
+- action_greet_user
+- action_next_step
+- utter_anything_else
+- utter_ask_feedback
+- utter_ask_howdoing
+- utter_ask_isbot
+- utter_ask_name
+- utter_ask_weather
+- utter_ask_whoisit
+- utter_awesome
+- utter_bye
+- utter_cant_answer_tech_question
+- utter_canthelp
+- utter_default
+- utter_great
+- utter_greet
+- utter_greet_name
+- utter_greet_noname
+- utter_no_speak
+- utter_nohelp
+- utter_not_sure
+- utter_noworries
+- utter_out_of_scope
+- utter_possibilities
+- utter_react_negative
+- utter_react_positive
+- utter_restart_with_button
+- utter_thumbsup
+- utter_what_help

@@ -2,9 +2,12 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
+from typing import Text, Dict, Any, List
 
-from rasa_core_sdk import Action
+from rasa_core_sdk import Action, Tracker
 from rasa_core_sdk.events import SlotSet
+from rasa_sdk.executor import CollectingDispatcher
+
 
 class ActionGreetUser(Action):
     """Greets the user with/without privacy policy"""
