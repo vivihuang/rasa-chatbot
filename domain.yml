@@ -213,7 +213,6 @@ actions:
 - utter_not_sure
 - utter_noworries
 - utter_out_of_scope
-- utter_possibilities
 - utter_react_negative
 - utter_react_positive
 - utter_restart_with_button

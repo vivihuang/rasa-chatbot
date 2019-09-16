@@ -73,7 +73,6 @@
     - utter_anything_else
 * enter_data
     - utter_not_sure
-    - utter_possibilities
 
 ## positive reaction
 * react_positive

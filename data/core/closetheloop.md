@@ -31,7 +31,6 @@
     - utter_nohelp
 * out_of_scope
     - utter_out_of_scope
-    - utter_possibilities
 * ask_whoisit
     - action_chitchat
 * ask_howdoing
