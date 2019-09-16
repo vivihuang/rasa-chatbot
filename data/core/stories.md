@@ -38,7 +38,9 @@
 
 ## negative reaction
 * react_negative
-    - utter_react_negative## thanks
+    - utter_react_negative
+
+## thanks
 * thank
     - utter_noworries
     - utter_anything_else
