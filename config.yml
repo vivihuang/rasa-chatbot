@@ -19,14 +19,12 @@ pipeline:
 - name: "rasa_nlu_gao.classifiers.embedding_bert_intent_classifier.EmbeddingBertIntentClassifier"
 
 policies:
-  - name: KerasPolicy
-    epochs: 50
+  - epochs: 50
     max_history: 6
-
+    name: KerasPolicy
   - name: FallbackPolicy
     fallback_action_name: 'action_default_fallback'
     nlu_threshold: 0.5
     core_threshold: 0.3
-
   - name: MemoizationPolicy
     max_history: 3
