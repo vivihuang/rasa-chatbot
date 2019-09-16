@@ -152,6 +152,8 @@ templates:
       payload: /feedback{"feedback_value":"positive"}
     - title: 👎
       payload: /feedback{"feedback_value":"negative"}
+  utter_what_help:
+  - text: Ok, what can I help you with?
   utter_canthelp:
   - text: I'm sorry I couldn't help you.
   utter_nohelp:

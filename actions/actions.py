@@ -2,11 +2,15 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
+import logging
+import json
 from typing import Text, Dict, Any, List
 
-from rasa_core_sdk import Action, Tracker
-from rasa_core_sdk.events import SlotSet
+from rasa_sdk import Action, Tracker
+from rasa_sdk.events import SlotSet, UserUtteranceReverted, ConversationPaused
 from rasa_sdk.executor import CollectingDispatcher
+
+logger = logging.getLogger(__name__)
 
 
 class ActionGreetUser(Action):
@@ -153,7 +157,6 @@ class ActionDefaultFallback(Action):
         tracker: Tracker,
         domain: Dict[Text, Any],
     ) -> List["Event"]:
-
         # Fallback caused by TwoStageFallbackPolicy
         if (
             len(tracker.events) >= 4
